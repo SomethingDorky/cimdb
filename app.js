@@ -18,8 +18,7 @@ var commentRoutes   = require("./routes/comments"),
     indexRoutes     = require("./routes/index");
 
 // Connect Mongoose to MongoDB    
-// mongoose.connect("mongodb://localhost/thing_app");
-mongoose.connect("mongodb://DorkymLab:mxXydNBsWtGOoF39LVfT@ds133290.mlab.com:33290/cimdb");
+mongoose.connect(process.env.DATABASEURL);
 
 // App Configuration Options
 app.use(bodyParser.urlencoded({extended: true}));
